@@ -1,4 +1,4 @@
-# Projeto Spring JPA
+# Workshop Spring MongoDB
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/fabricioddsilva/workshop-spring-mongodb/blob/main/LICENSE)
 
 # Sobre o Projeto
