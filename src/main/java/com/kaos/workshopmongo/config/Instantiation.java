@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -54,7 +53,6 @@ public class Instantiation implements CommandLineRunner {
         maria.getPosts().addAll(Arrays.asList(post1, post2));
 
         userRepository.save(maria);
-
 
     }
 }

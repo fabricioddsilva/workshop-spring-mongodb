@@ -1,5 +1,6 @@
 package com.kaos.workshopmongo.resources;
 
+import com.kaos.workshopmongo.entities.Post;
 import com.kaos.workshopmongo.entities.User;
 import com.kaos.workshopmongo.entities.dto.UserDTO;
 import com.kaos.workshopmongo.services.UserService;
@@ -50,5 +51,11 @@ public class UserResource {
         user.setId(id);
         user = service.update(user, id);
         return ResponseEntity.ok().body(new UserDTO(user));
+    }
+
+    @GetMapping(value = "/{id}/posts")
+    public ResponseEntity<List<Post>> findPosts (@PathVariable String id){
+        User user = service.findById(id);
+        return ResponseEntity.ok().body(user.getPosts());
     }
 }
